@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSONPlaceholder Posts Viewer</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>JSONPlaceholder Posts Viewer</h1>
+            <p>Переглядайте пости з JSONPlaceholder API</p>
+        </header>
+        
+        <div class="controls">
+            <div class="input-group">
+                <label for="postCount">Кількість постів для завантаження:</label>
+                <input 
+                    type="number" 
+                    id="postCount" 
+                    min="1" 
+                    max="100" 
+                    value="5" 
+                    required
+                    placeholder="Введіть кількість постів"
+                />
+            </div>
+            <button id="fetchBtn" class="fetch-btn">FETCH POSTS</button>
+        </div>
+
+        <div id="loading" class="loading hidden">
+            <div class="spinner"></div>
+            <p>Завантажуємо пости...</p>
+        </div>
+
+        <div id="error" class="error hidden"></div>
+
+        <div id="postsContainer" class="posts-container"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html> 
